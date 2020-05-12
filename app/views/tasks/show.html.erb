@@ -1,0 +1,9 @@
+<%= @task.title %>
+<%= @task.details %>
+<%= @task.completed%>
+
+<%= link_to "return to home", tasks_path %>
+<%= link_to "edit a task", edit_task_path %>
+<%= link_to  task_path(@task), method: :delete, data: {confirm: "Are you sure?"} do %>
+<i class="far fa-square"></i>
+<% end %>
